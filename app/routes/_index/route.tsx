@@ -5,6 +5,8 @@ import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
+import MaterialUiComponent from '../../../src/components/material-ui-component/material-ui-component';
+import Button from '@mui/material/Button';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
@@ -13,6 +15,8 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
+            <MaterialUiComponent />
+            <Button variant="outlined">Hello</Button>
             <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
             <span>
                 Double click to edit App component
