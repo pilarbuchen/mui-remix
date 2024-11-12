@@ -9,7 +9,6 @@ import {
 } from '@remix-run/react';
 import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
-import MaterialUiComponent from '../src/components/material-ui-component/material-ui-component';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (

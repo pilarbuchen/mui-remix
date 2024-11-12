@@ -5,7 +5,7 @@ import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
-import MaterialUiComponent from '../../../src/components/material-ui-component/material-ui-component';
+import { MaterialUIComponent } from '../../../src/components/material-ui-component/material-ui-component';
 import Button from '@mui/material/Button';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
@@ -14,20 +14,8 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 
 export default function HomePage() {
     return (
-        <div className={styles.root}>
-            <MaterialUiComponent />
-            <Button variant="outlined">Hello</Button>
-            <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
-            <span>
-                Double click to edit App component
-                <br />
-                &amp; drag here elements from + Add <b>Elements</b> Panel
-            </span>
-            <p className={styles.paragraph}>
-                This project is using <img src={ViteSvg} width="12" />+
-                <img src={TypescriptSvg} width="12" />
-                Visit vitejs.dev to learn more.{' '}
-            </p>
+        <div>
+            <MaterialUIComponent />
         </div>
     );
 }
