@@ -1,3 +1,4 @@
+import { CssBaseline, StyledEngineProvider } from '@mui/material';
 import {
     Links,
     Meta,
@@ -31,7 +32,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
     return (
         <div id="root">
-            <Outlet />
+            <StyledEngineProvider injectFirst>
+                <CssBaseline />
+                <Outlet />
+            </StyledEngineProvider>
         </div>
     );
 }

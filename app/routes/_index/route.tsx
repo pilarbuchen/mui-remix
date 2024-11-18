@@ -3,10 +3,7 @@ import styles from './_index.module.scss';
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
 import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
-import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
-import ViteSvg from '../../../src/assets/svg/vite.svg';
 import { MaterialUIComponent } from '../../../src/components/material-ui-component/material-ui-component';
-import Button from '@mui/material/Button';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
